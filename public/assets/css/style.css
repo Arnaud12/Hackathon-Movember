@@ -24,15 +24,45 @@ footer {
     width: 80%;
 }
 
+
 /*accueil.html*/
 
 .carousel {
-        align-content: center;
-        border: 5px solid black;
-        margin: 0 auto;
-        max-width: 100%;
-    }
+    align-content: center;
+    border: 5px solid black;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
 /*form.html*/
+
+#presentationform {
+    text-align: center;
+    padding: 10% 15% 10% 15%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form {
+    text-align: center;
+    padding: 5% 15% 20% 15%;
+}
+
+#parcourir {
+    font-size: 16px;
+}
+
+.champs {
+    margin: 15%;
+}
+
+#envoyer {
+    margin: 15%;
+    font-size: 22px;
+}
+
+
 /*photo.html*/
 
 * {
@@ -251,6 +281,7 @@ header p {
     100% {
         background: transparent;
     }
+    .directive('file', findImage)
 }
 
 
