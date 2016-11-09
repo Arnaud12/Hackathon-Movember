@@ -24,7 +24,15 @@ footer {
     width: 80%;
 }
 
+/*accueil.html*/
 
+.carousel {
+        align-content: center;
+        border: 5px solid black;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+/*form.html*/
 /*photo.html*/
 
 * {
