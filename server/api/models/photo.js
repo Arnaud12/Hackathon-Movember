@@ -4,8 +4,7 @@ const photosSchema = new mongoose.Schema({
     stachePhoto: String,
     pseudoPhoto: String,
     lieuPhoto: String,
-    commentPhoto: String,
-
+    commentPhoto: String
 });
 
 let model = mongoose.model('Photo', photosSchema);

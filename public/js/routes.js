@@ -8,7 +8,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/form', {
             templateUrl: 'views/form.html',
-            controller: 'mainController',
+            controller: 'createPhoto',
             controllerAs: 'vm'
         })
 
