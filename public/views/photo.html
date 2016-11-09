@@ -1,0 +1,16 @@
+<div class="row">
+  <form class="col s12" action="/api/picture" enctype="multipart/form-data" method="post">
+      <div class="file-field input-field">
+          <div class="btn black">
+              <span>Parcourir..</span>
+              <input file-upload type="file" placeholder="Image" id="uploadImage" name='file'>
+          </div>
+          <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+          </div>
+      </div>
+      <input id="titrePhoto" placeholder="Veuillez saisir un pseudo" type="text" ng-model='photo.pseudoPhoto'>
+      <input id="descPhoto" placeholder="Veuillez saisir un nom de ville" type="text" ng-model='photo.lieuPhoto'>
+  </form>
+  <button ng-click='vm.create(photo)' onclick="Materialize.toast('Votre moustache est envoyée!', 4000)" class="btn waves-effect waves-light blue">Envoyer</button>
+</div>
