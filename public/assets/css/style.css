@@ -1,16 +1,27 @@
-.navbar-yellow {
-    background-color: #FFF94D;
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    border-radius: 0;
-    border-bottom: 2px solid black;
+/* Navbar */
+
+.logo{
+  margin-top: 10px
 }
-.navbar-brand img {
-    max-height: 100%;
-    transition: 0.8s;
+
+
+/* Button */
+
+.center-btn {
+  text-align: center
+ }
+
+
+/* footer */
+
+footer{
+  position: fixed;
+  bottom: 0;
+  z-index: 100
 }
-.navbar-brand:hover img {
-    transform: rotate(360deg);
+
+
+.camera
+{
+  width: 80%;
 }
