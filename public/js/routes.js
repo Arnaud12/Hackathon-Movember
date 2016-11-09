@@ -6,27 +6,16 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'mainController',
             controllerAs: 'vm'
         })
-        .when('/login', {
-            templateUrl: 'views/login.html',
-            controller: 'loginController',
+        .when('/form', {
+            templateUrl: 'views/form.html',
+            controller: 'mainController',
             controllerAs: 'vm'
         })
 
-        .when('/createPhoto', {
-            templateUrl: 'views/admin/createPhoto.html',
+        .when('/addphoto', {
+            templateUrl: 'views/photo.html',
             controller: 'createPhoto',
             controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
-        })
-        .when('/deletePhoto', {
-            templateUrl: 'views/admin/deletePhoto.html',
-            controller: 'deletePhoto',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
         })
         .otherwise({
             redirectTo: '/'

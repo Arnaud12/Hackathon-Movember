@@ -9,7 +9,7 @@ class deletePhoto {
         })
     }
     delete(photo) {
-        this.photoService.delete(photo._id, photo.stachePhoto, photo.pseudoPhoto, photo.lieuPhoto).then(() => {
+        this.photoService.delete(photo._id, photo.stachePhoto, photo.pseudoPhoto, photo.lieuPhoto, photo.commentPhoto).then(() => {
             this.load()
         })
     }

@@ -3,7 +3,9 @@ import mongoose from 'mongoose';
 const photosSchema = new mongoose.Schema({
     stachePhoto: String,
     pseudoPhoto: String,
-    lieuPhoto: String
+    lieuPhoto: String,
+    commentPhoto: String,
+
 });
 
 let model = mongoose.model('Photo', photosSchema);
@@ -34,7 +36,8 @@ export default class Photo {
         model.create({
                 stachePhoto: req.body.stachePhoto,
                 photoPhoto: req.body.pseudoPhoto,
-                lieuPhoto: req.body.lieuPhoto
+                lieuPhoto: req.body.lieuPhoto,
+                commentPhoto: req.body.commentPhoto
             },
             (err, photo) => {
                 if (err) {
@@ -51,7 +54,8 @@ export default class Photo {
         }, {
             stachePhoto: req.body.stachePhoto,
             pseudoPhoto: req.body.pseudoPhoto,
-            lieuPhoto: req.body.lieuPhoto
+            lieuPhoto: req.body.lieuPhoto,
+            commentPhoto: req.body.commentPhoto
         }, (err, photo) => {
             if (err || !photo) {
                 res.status(500).send(err.message);

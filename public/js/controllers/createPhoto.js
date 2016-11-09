@@ -42,14 +42,14 @@ class createPhoto {
         if (!photo.lieuPhoto)
             photo.lieuPhoto = "&nbsp;";
 
-        this.photoService.create(photo.stachePhoto, photo.pseudoPhoto,photo.lieuPhoto).then(() => {
+        this.photoService.create(photo.stachePhoto, photo.pseudoPhoto,photo.lieuPhoto, photo.commentPhoto).then(() => {
             this.photo = {};
             this.load()
         })
     }
 
     delete(photo) {
-        this.photoService.delete(photo._id, photo.stachePhoto, photo.pseudoPhoto, photo.lieuPhoto).then(() => {
+        this.photoService.delete(photo._id, photo.stachePhoto, photo.pseudoPhoto, photo.lieuPhoto, photo.commentPhoto).then(() => {
             this.load()
         })
     }
