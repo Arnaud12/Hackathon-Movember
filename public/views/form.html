@@ -4,9 +4,9 @@
 <div class="row form">
     <form class="col s12" action="/api/picture" enctype="multipart/form-data" method="post">
         <div class="file-field input-field">
-            <div class="btn black">
-                <p><input class="btn btn-primary" type="file" id="take-picture"></p>
-                <p><img src="../assets/img/camera.png" alt="" id="show-picture"></p>
+            <div id="parcourir" class="btn black">
+                <span>Photo</span>
+                <input file-upload type="file" placeholder="Image" id="uploadImage" name='file'>
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
@@ -17,6 +17,27 @@
         <input class="champs" id="commentPhoto" placeholder="Un commentaire ? Ex : OMG IT'S A PORNSTACHE." type="text" ng-model='photo.commentPhoto'>
     </form>
     <div class="row form">
-      <input ng-click='vm.create(photo)' onclick="Materialize.toast('Toutes les moustaches, les S.O.S partent dans les airs!', 4000)" id="envoyer stachebouton" type="image" src="assets/img/stache2.png"  name="ok">
+        <input ng-click='vm.create(photo)' onclick="Materialize.toast('Toutes les moustaches, les S.O.S partent dans les airs!', 4000)" id="envoyer stachebouton" type="image" src="assets/img/stache2.png" name="ok">
+    </div>
+</div>
+<div class="map">
+    <a href="#" id="get_location">Get location</a>
+    <div id="map">
+        <iframe id="google_map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk?output=embed"></iframe>
+    </div>
+    <script type="text/javascript">
+    var c = function(pos){
+      var lat = pos.coords.latitude,
+          long = pos.coords.longitude,
+          coords = lat + ',' + long;
+
+          document.getElementById('google_map').setAttribute('src', 'https://google.co.uk/?q=' + coords + '&z=60&output=embed');
+    }
+
+      document.getElementById('get_location').onclick = function(){
+        navigator.geolocation.getCurrentPosition(c);
+        return false;
+      }
+    </script>
 </div>
 <script src="js/scriptPhoto.js"></script>

@@ -20,7 +20,7 @@
                 <div class="row">
 
                     <a class="waves-effect waves-light"><img class="heart" num="number-2" src="assets/img/like.png"/></a>
-                    <a id="number-2">0</a>
+                    <a id="number-2">{{vm.accueils.vote}}</a>
                 </div>
             </div>
         </div>
@@ -28,19 +28,6 @@
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('.heart').click(function() {
-            if ($(this).attr("src") == 'assets/img/like.png') {
-                $(this).attr("src", "assets/img/like1.png");
-                $("#" + $(this).attr('num')).text(Number($("#" + $(this).attr('num')).text()) + 1)
-            } else {
-                $(this).attr("src", "assets/img/like.png");
-                $("#" + $(this).attr('num')).text(Number($("#" + $(this).attr('num')).text()) - 1)
-
-            }
-        });
-    });
-
     $('.carousel.carousel-slider').carousel({full_width: true})
     $(".btn").click(function() {
         carrousel.next();
