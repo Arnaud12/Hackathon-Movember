@@ -1,11 +1,9 @@
-<p id="presentationform">Envoyez votre moustache<br/>
-    ou<br/>
-    prenez la en photo !</p>
+<p id="presentationform">Just share it !</p>
 <div class="row form">
     <form class="col s12" action="/api/picture" enctype="multipart/form-data" method="post">
         <div class="file-field input-field">
             <div class="btn black parcourir">
-                <span>Parcourir</span>
+                <span>Photo</span>
                 <input file-upload type="file" placeholder="Image" id="uploadImage" name='file'>
             </div>
             <div class="file-path-wrapper">
@@ -17,5 +15,11 @@
         <input class="champs" id="commentPhoto" placeholder="Un commentaire ? Ex : OMG IT'S A PORNSTACHE." type="text" ng-model='photo.commentPhoto'>
     </form>
     <div class="row form">
-      <input ng-click='vm.create(photo)' onclick="Materialize.toast('Toutes les moustaches, les S.O.S partent dans les airs!', 4000)" id="envoyer stachebouton" type="image" src="assets/img/stache2.png"  name="ok">
+        <input ng-click='vm.create(photo)' onclick="Materialize.toast('Toutes les moustaches, les S.O.S partent dans les airs!', 4000)" id="envoyer stachebouton" type="image" src="assets/img/stache2.png" name="ok">
+    </div>
+    <div class="retourAdmin">
+        <a href="/#/" style="color:#000000">
+            Retour à l'accueil
+        </a>
+    </div>
 </div>

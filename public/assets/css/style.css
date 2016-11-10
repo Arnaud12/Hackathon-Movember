@@ -1,3 +1,24 @@
+/*Général (Akbar)*/
+
+body, html {
+    font-family: "Open Sans", helvetica, sans-serif;
+}
+
+.retourAdmin {
+  margin : 20% 10% 10% 10%;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle!important;
+    text-align: center;
+}
+
+.retourAdmin2 {
+    margin : 20% 10% 10% 10%;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle!important;
+    text-align: center;
+}
 /* Navbar */
 
 h2 {
@@ -6,10 +27,12 @@ h2 {
 }
 
 .logo {
-    margin-top: 10px
+    margin-top: 10px;
 }
 
-
+.buttonnews {
+    text-align: center;
+}
 /* footer */
 
 .center-btn {
@@ -39,34 +62,26 @@ footer {
     z-index: 100
 }
 
-#banner {
-    max-width: 100%;
-}
-
 .camera {
     height: 60px;
     width: 60px;
     position: absolute;
 }
 
-
 /*accueil.html*/
 
+#banner {
+    max-width: 100%;
 
+}
 /*form.html*/
 
 
-/*photo.html*/
-
 #presentationform {
     text-align: center;
-    padding: 5% 10% 5% 10%;
-    font-size: 20px;
+    padding: 0;
+    font-size: 30px;
     font-weight: bold;
-}
-
-body, html {
-    font-family: "Open Sans", helvetica, sans-serif;
 }
 
 .form {
@@ -86,21 +101,23 @@ body, html {
     font-size: 22px;
 }
 
-.stachebouton {
-    margin-top: -100%;
-    margin-bottom: -100%;
-    padding-bottom: 0;
-    padding-top: -15%;
+#stachebouton {
+    margin-top: 40px;
+    padding: 10px;
     width: 250px;
-    height: 100px;
+    height: 20px;
 }
-
 
 /*newsletter.html*/
 
-#textmodal {
+#textnews {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    margin: 10% 10% 10% 10%;
+    text-align: center;
+}
+
+.boutonenvoyer{
     margin: 10% 10% 20% 10%;
 }
