@@ -2,8 +2,8 @@
     <form class="col s12" action="/api/picture" enctype="multipart/form-data" method="post">
         <div class="file-field input-field">
             <div class="btn black">
-                <span>Parcourir</span>
-                <input file-upload type="file" placeholder="Image" id="uploadImage" name='file'>
+                <p><input class="btn btn-primary" type="file" id="take-picture"></p>
+                <p><img src="../assets/img/camera.png" alt="" id="show-picture"></p>
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
@@ -15,3 +15,4 @@
     </form>
     <button ng-click='vm.create(photo)' onclick="Materialize.toast('Toutes les moustaches, les M.O.S partent dans les airs!', 4000)" class="btn waves-effect waves-light black">Envoyer</button>
 </div>
+<script src="js/scriptPhoto.js"></script>
