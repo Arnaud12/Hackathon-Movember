@@ -19,6 +19,50 @@ h2 {
 #iconFacebook {
     height: 30px;
     width: 30px;
+}
+/* footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 100
+}
+
+.camera {
+    width: 80%;
+}
+
+
+/*accueil.html*/
+
+.carousel {
+    align-content: center;
+    border: 5px solid black;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+
+/*form.html*/
+
+
+/*photo.html*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+video {
+    display: block;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#videocontainer, canvas {
     position: absolute;
     top: 25%;
     left: 8%;
@@ -43,18 +87,73 @@ footer {
     max-width: 100%;
 }
 
+#controls, #uploaded, #uploading {
+    position: absolute;
+    width: 600px;
+    text-align: center;
+    top: -60%;
+    left: 50%;
+    -webkit-transition: 1s 0.5s;
+    -moz-transition: 1s 0.5s;
+    -ms-transition: 1s 0.5s;
+    -o-transition: 1s 0.5s;
+    transition: 1s 0.5s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .camera {
     height: 60px;
-    width: 60px;
     position: absolute;
+    width: 80vw;
+    top: -50%;
+    left: 50%;
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    -webkit-transition: 1s 0.5s;
+    -moz-transition: 1s 0.5s;
+    -ms-transition: 1s 0.5s;
+    -o-transition: 1s 0.5s;
+    transition: 1s 0.5s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+header h1 {
+    color: #eee;
+    font-size: 32px;
+    padding-bottom: 10px;
 }
 
 
 /*accueil.html*/
 
-
 /*form.html*/
 
+#controls button, #uploaded form, #uploaded button, #uploading {
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    width: 38%;
+    background: green;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 5% 20% 0% 20%;
+}
+
+#photo{
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  margin-top: 10%;
+}
 
 /*photo.html*/
 
@@ -63,6 +162,94 @@ footer {
     padding: 5% 10% 5% 10%;
     font-size: 20px;
     font-weight: bold;
+    width: auto;
+    min-height: auto;
+}
+
+#uploading {
+    background: #999;
+}
+
+#controls #resetbutton {
+    background: #c00;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    width: 48%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 90%;
+}
+
+#uploaded a {
+    color: #fff;
+}
+
+#uploaded input {
+    font-size: inherit;
+}
+
+#cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: transparent;
+    display: none;
+}
+
+.reviewing #cover {
+    display: block;
+    -webkit-animation: flash 1s;
+    -moz-animation: flash 1s;
+    /*-o-animation: flash 1s;*/
+    -ms-animation: flash 1s;
+    animation: flash 1s;
+}
+
+
+/*
+  TODO:
+  I turned off the flash animation for Opera as it got stuck
+*/
+
+@-webkit-keyframes flash {
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #fff;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@-moz-keyframes flash {
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #fff;
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+@-ms-keyframes flash {
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: #fff;
+    }
+    100% {
+        background: transparent;
+    }
+>>>>>>> Arnaud
 }
 
 body, html {
