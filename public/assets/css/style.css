@@ -23,7 +23,9 @@ footer {
     z-index: 100
 }
 
-
+#banner{
+  max-width: 100%;
+}
 
 .camera {
     width: 80%;
