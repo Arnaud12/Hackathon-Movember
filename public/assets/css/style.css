@@ -35,8 +35,14 @@ h2 {
 }
 
 #burger{
-    margin-right :0;
+    margin-right :35px;
 }
+
+.dropdown-content li a {
+
+  color: white;
+}
+
 
 /* footer */
 
