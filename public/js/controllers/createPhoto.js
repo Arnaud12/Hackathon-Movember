@@ -27,7 +27,6 @@ class createPhoto {
         }, false);
 
     }
-
     load() {
         this.photoService.getAll().then((res) => {
             this.photos = res.data;
@@ -37,19 +36,17 @@ class createPhoto {
     create(photo) {
         var urlImage = '/uploads/' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
         console.log(urlImage);
-        this.photo.stachePhoto = urlImage;
+        photo.stachePhoto = urlImage;
 
-        if (!this.photo.lieuPhoto)
-            this.photo.lieuPhoto = "&nbsp;";
 
-        this.photoService.create(this.photo.stachePhoto, this.photo.pseudoPhoto, this.photo.lieuPhoto, this.photo.commentPhoto).then(() => {
+        this.photoService.create(photo.stachePhoto, photo.pseudoPhoto, photo.lieuPhoto, photo.commentPhoto, photo.heartPhoto).then(() => {
             this.photo = {};
             this.load()
         })
     }
 
     delete(photo) {
-        this.photoService.delete(photo._id, photo.stachePhoto, photo.pseudoPhoto, photo.lieuPhoto, photo.commentPhoto).then(() => {
+        this.photoService.delete(photo._id, photo.stachePhoto, photo.pseudoPhoto, photo.lieuPhoto, photo.commentPhoto, photo.heartPhoto).then(() => {
             this.load()
         })
     }

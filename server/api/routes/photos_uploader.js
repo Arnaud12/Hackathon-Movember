@@ -15,7 +15,7 @@ module.exports = function(app) {
         var
             wdth = 200,
             hgth = 200,
-            new_location = 'public/Uploads/';
+            new_location = 'public/uploads/';
 
         new formidable.IncomingForm()
             .parse(req, function(err, fields, files) {
