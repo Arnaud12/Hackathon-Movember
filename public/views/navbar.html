@@ -1,14 +1,32 @@
 <nav class="nav-fixed z-depth-0 black">
     <img class="logo brand-logo left" src="assets/img/logo.png"/>
-    <a href="#" class="brand-logo">ShareUrStash</a>
-    <a id="burger" data-activates="mobile-demo" class="button-collapse brand-logo right"><i class="material-icons">menu</i></a>
-    <ul class="side-nav" id="mobile-demo">
-      <li><a href="sass.html">Accueil</a></li>
-      <li><a href="badges.html">JustShareIt</a></li>
-      <li><a href="collapsible.html">Newsletter</a></li>
+    <a href="/#/" class="brand-logo">ShareUrStash</a>
+
+    <a class='dropdown-button right' data-beloworigin="true" data-activates='dropdown1'><i id="burger" class="material-icons">menu</i></a>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content black'>
+      <li><a href="/#/">Accueil</a></li>
+      <li><a href="/#/form">JustShareIt</a></li>
+      <li><a href="/#/newsletter">Newsletter</a></li>
     </ul>
+
+
 </nav>
 
 <script type="text/javascript">
-$(".button-collapse").sideNav();
+
+
+$('.dropdown-button').dropdown({
+    inDuration: 300,
+    outDuration: 225,
+    constrain_width: false, // Does not change width of dropdown to that of the activator
+    hover: false, // Activate on hover
+    gutter: 0, // Spacing from edge
+    belowOrigin: true, // Displays dropdown below the button
+    alignment: 'left' // Displays dropdown with edge aligned to the left of button
+  }
+);
+
+
 </script>
