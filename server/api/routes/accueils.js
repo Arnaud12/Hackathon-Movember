@@ -11,9 +11,9 @@ module.exports = (app) => {
 
     router.get('/:id', accueil.findById);
 
-    router.post('/',  accueil.create);
+    router.post('/', accueil.create);
 
-    router.put('/:id',  accueil.update);
+    router.put('/:id', accueil.update);
 
     router.delete('/:id', accueil.delete);
 
