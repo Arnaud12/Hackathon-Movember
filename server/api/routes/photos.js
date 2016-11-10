@@ -1,5 +1,4 @@
 import express from 'express';
-import Auth from '../middlewares/authorization.js';
 import Photo from '../models/photo.js';
 
 let router = express.Router();
@@ -12,11 +11,11 @@ module.exports = (app) => {
 
     router.get('/:id', photo.findById);
 
-    router.post('/', Auth.hasAuthorization, photo.create);
+    router.post('/', photo.create);
 
-    router.put('/:id', Auth.hasAuthorization, photo.update);
+    router.put('/:id', photo.update);
 
-    router.delete('/:id', Auth.hasAuthorization, photo.delete);
+    router.delete('/:id', photo.delete);
 
     app.use('/photos', router);
 

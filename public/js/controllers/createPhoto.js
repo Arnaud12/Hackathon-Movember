@@ -35,7 +35,7 @@ class createPhoto {
     }
 
     create(photo) {
-        var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+        var urlImage = '/uploads/' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
         console.log(urlImage);
         this.photo.stachePhoto = urlImage;
 
