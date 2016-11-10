@@ -33,6 +33,11 @@ h2 {
 .buttonnews {
     text-align: center;
 }
+
+#burger{
+    margin-right :0;
+}
+
 /* footer */
 
 .center-btn {
