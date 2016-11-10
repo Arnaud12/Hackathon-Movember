@@ -1,8 +1,8 @@
 <br>
 <div class="imput-field">
     <div class="col s12">
-<a><img id="banner" src="assets/img/banner.png"/></a>
-</div>
+        <img id="banner" src="assets/img/banner.png"/>
+    </div>
 </div>
 
 <div class="row">
@@ -10,15 +10,20 @@
         <div class="card">
             <div class="card-image">
                 <img src="assets/img/photo.jpg">
-                <span class="card-title">Card Title</span>
+                <span class="card-title"><p ng-bind-html='photo.pseudoPhoto'></p></span>
             </div>
             <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                <div class="col s12" ng-repeat='photo in vm.photos'>
+                    <img src="{{photo.stachePhoto}}" alt="photos" class="stachePhoto">
+                    <p>{{photo.lieuPhoto}}</p>
+                    <p>{{photo.commentPhoto}}</p>
+                    <p>{{photo.stachePhoto}}</p>
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&appId=1222472067795207&width=72&height=20" width="72" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="fr" data-size="large">Tweeter</a>
+                </div>
             </div>
             <div class="card-action">
-
                 <div class="row">
-
                     <a class="waves-effect waves-light"><img class="heart" num="number-2" src="assets/img/like.png"/></a>
                     <a id="number-2">{{vm.accueils.vote}}</a>
                 </div>
@@ -27,9 +32,13 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <script type="text/javascript">
     $('.carousel.carousel-slider').carousel({full_width: true})
     $(".btn").click(function() {
         carrousel.next();
     })
 </script>
+=======
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+>>>>>>> sylvain

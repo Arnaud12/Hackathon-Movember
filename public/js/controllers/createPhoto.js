@@ -35,14 +35,14 @@ class createPhoto {
     }
 
     create(photo) {
-        var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+        var urlImage = '/uploads/' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
         console.log(urlImage);
-        photo.stachePhoto = urlImage;
+        this.photo.stachePhoto = urlImage;
 
-        if (!photo.lieuPhoto)
-            photo.lieuPhoto = "&nbsp;";
+        if (!this.photo.lieuPhoto)
+            this.photo.lieuPhoto = "&nbsp;";
 
-        this.photoService.create(photo.stachePhoto, photo.pseudoPhoto,photo.lieuPhoto, photo.commentPhoto).then(() => {
+        this.photoService.create(this.photo.stachePhoto, this.photo.pseudoPhoto, this.photo.lieuPhoto, this.photo.commentPhoto).then(() => {
             this.photo = {};
             this.load()
         })
