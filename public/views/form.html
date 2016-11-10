@@ -1,6 +1,8 @@
-<p id="presentationform">Envoyez votre moustache<br/> ou<br/> prenez la en photo !</p>
+<p id="presentationform">Envoyez votre moustache<br/>
+    ou<br/>
+    prenez la en photo !</p>
 <div class="row form">
-        <form class="col s12" action="/api/picture" enctype="multipart/form-data" method="post">
+    <form class="col s12" action="/api/picture" enctype="multipart/form-data" method="post">
         <div class="file-field input-field">
             <div class="btn black parcourir">
                 <span>Parcourir</span>
@@ -12,7 +14,8 @@
         </div>
         <input class="champs" id="titrePhoto" placeholder="Veuillez saisir un pseudo" type="text" ng-model='photo.pseudoPhoto'>
         <input class="champs" id="lieuPhoto" placeholder="Veuillez saisir votre ville" type="text" ng-model='photo.lieuPhoto'>
-        <input class="champs" id="commentPhoto" placeholder="Un commentaire ? Ex : Pornstache is my mum." type="text" ng-model='photo.commentPhoto'>
+        <input class="champs" id="commentPhoto" placeholder="Un commentaire ? Ex : OMG IT'S A PORNSTACHE." type="text" ng-model='photo.commentPhoto'>
     </form>
-    <button ng-click='vm.create(photo)' onclick="Materialize.toast('Toutes les moustaches, les S.O.S partent dans les airs!', 4000)" id="envoyer" class="btn waves-effect waves-light black">Envoyer</button>
+    <div class="row form">
+      <input ng-click='vm.create(photo)' onclick="Materialize.toast('Toutes les moustaches, les S.O.S partent dans les airs!', 4000)" id="envoyer stachebouton" type="image" src="assets/img/stache2.png"  name="ok">
 </div>

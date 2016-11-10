@@ -11,9 +11,8 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'createPhoto',
             controllerAs: 'vm'
         })
-
-        .when('/addphoto', {
-            templateUrl: 'views/photo.html',
+        .when('/newsletter', {
+            templateUrl: 'views/newsletter.html',
             controller: 'createPhoto',
             controllerAs: 'vm',
         })
