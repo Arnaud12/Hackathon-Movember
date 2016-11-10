@@ -4,11 +4,12 @@ class photoService {
         this.$http = $http;
     }
 
-    create(logo, title, descr) {
+    create(stache, pseudo, lieu, comment) {
         return this.$http.post('/api/photos', {
-            logoPhoto: logo,
-            titrePhoto: title,
-            descriptionPhoto: descr
+            stachePhoto: stache,
+            pseudoPhoto: pseudo,
+            lieuPhoto: lieu,
+            commentPhoto: comment
         })
     }
 

@@ -9,6 +9,6 @@ angular.module('app', ['ngRoute', 'ngSanitize'])
     .controller('createPhoto', createPhoto)
     .controller('deletePhoto', deletePhoto)
     .directive('navbarFix', navbarFix)
-    .directive('file', findImage)
+    .directive('fintImage', findImage)
     .config(routes)
     .run(loginStatus);
